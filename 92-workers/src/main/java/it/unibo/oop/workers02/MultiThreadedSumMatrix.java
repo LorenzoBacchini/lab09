@@ -42,7 +42,9 @@ public class MultiThreadedSumMatrix implements SumMatrix{
         public void run() {
             int summedElem = 0;
             System.out.println("Working from position x: " + xPos + " y: " + yPos
-             + " to position x: " + (startpos + nelem - 1)/matrix[0].length + " y: " + (startpos + nelem - 1)%matrix[0].length);
+             + " to position x: " + (startpos + nelem - 1)/matrix[0].length
+             + " y: " + (startpos + nelem - 1)%matrix[0].length);
+             
             for (int i = xPos; i < matrix.length && summedElem < nelem; i++ ) {
                 for (int j = yPos; j < matrix[0].length && summedElem < nelem; j++) {
                     this.res += this.matrix[i][j];
